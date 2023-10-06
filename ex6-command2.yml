@@ -11,3 +11,6 @@
      cmd: touch /opt/russia/sample1
 
   - name: code to remove git application
+    command:
+    cmd: yum remove -y git
+    
