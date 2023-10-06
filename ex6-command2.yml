@@ -10,4 +10,4 @@
     command:
      cmd: touch /opt/russia/sample1
 
-  - name: code to remove -y git
+  - name: code to remove git application
