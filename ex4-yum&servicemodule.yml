@@ -1,0 +1,14 @@
+-
+ name: pb on yum and service example
+ hosts: client1
+ tasls:
+  - name: code to install httpd application
+    yum:
+     name: httpd
+     state: present
+
+  - name: code to start httpd services
+    service:
+     name: httpd
+     state: started
+     
