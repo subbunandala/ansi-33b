@@ -1,9 +1,0 @@
--
- name: PB to execution test
- hosts: client1
- tasks:
-  - name: code to install ifconfig command
-    yum: 
-     name: net-tools
-     state: present
-      
