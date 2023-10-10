@@ -1,0 +1,48 @@
+-
+ name: code for project 
+ hosts: client1
+ tasks:
+  - name: update package cache
+    package:
+     name: epel-release
+     state: present
+
+  - name: code to install apache
+    package: 
+     name: httpd
+     state: present
+
+  - name: code to start the services
+    service: 
+     name: httpd
+     state: started
+
+  - name: code to enable httpd at boot time
+    service:
+     name: httpd
+     state: yes
+
+  - name: code to create directory
+    file: 
+     path: /opt/apache-logs
+     state: directory
+
+  - name: code to create file
+    file:
+     path: /opt/apache-logs/apache-log.logs
+     state: touch
+
+  - name: code to write a message into file
+    copy: 
+     content: "apache successfully installed"
+     dest: /opt/apache-logs/apache-log.logs
+
+  - name: code to write html code in apache webserver
+    copy: 
+     dest: /var/www/html/index.html
+     content: "<html>
+     <body>
+     <h1> ANSIBLE PROJECT SAMPLE <h1>
+     </body>
+     </html>"
+     
